@@ -20,7 +20,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 # take environment variables from .env file
-dotenv_path = os.path.join(BASE_DIR, ".env")
+dotenv_path = os.path.join(BASE_DIR, ".env.dev")
 load_dotenv(dotenv_path)
 
 # Quick-start development settings - unsuitable for production
@@ -34,7 +34,7 @@ SECRET_KEY = os.getenv("DJANGO_SECRET_KEY")
 DEBUG = True
 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
